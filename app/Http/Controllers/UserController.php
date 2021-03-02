@@ -40,11 +40,9 @@ class UserController extends Controller
             'email' => $request->email,
         ]);
 
-        $user = User::find($id);
-
         return [
             'status' => "success " . Response::HTTP_OK,
-            'data' => UserResource::collection($user)
+            'data' => $user
         ];
     }
 

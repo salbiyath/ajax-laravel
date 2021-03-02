@@ -113,7 +113,7 @@
                                     <button
                                         type="submit"
                                         class="btn btn-primary"
-                                        v-on:click.prevent="updateUser(userId)"
+                                        v-on:click="updateUser(userId)"
                                     >
                                         Submit
                                     </button>
@@ -165,7 +165,7 @@
                     },
                     updateUser: function(id){
                         this.$http.put("/api/user/update/" + id, {name: this.newName, email: this.newEmail}).then((response) => {
-                            console.log(response)
+
                             });
                     }
                 },
